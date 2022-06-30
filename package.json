@@ -1,5 +1,5 @@
 {
-  "name": "rollup-template",
+  "name": "sentry",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -23,5 +23,6 @@
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.7.4"
-  }
+  },
+  "dependencies": {}
 }

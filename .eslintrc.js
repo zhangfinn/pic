@@ -8,6 +8,9 @@ module.exports = {
   // 规则定制
   rules: {
     'no-unused-vars': 'off',
+    'prefer-rest-params': 'off',
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-vars': [
