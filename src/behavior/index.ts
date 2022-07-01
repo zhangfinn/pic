@@ -1,4 +1,5 @@
-import MetricsStore, { IMetrics } from '@/behavior/store'
+import MetricsStore from '@/behavior/store'
+// , { IMetrics }
 import PI from '@/behavior/user-vitals/PI'
 import RCR from '@/behavior/user-vitals/RCR'
 import PV from '@/behavior/user-vitals/PV'
@@ -8,7 +9,7 @@ import CDR from '@/behavior/user-vitals/CDR'
 import HT from '@/behavior/user-vitals/HT'
 import BehaviorStore from '@/behavior/BehaviorStore'
 import { getPageInfo } from '@/behavior/user-vitals/PI'
-import { transportCategory } from '@/utils/transport'
+// import { transportCategory } from '@/utils/transport'
 
 export default class UserVitals {
   public metrics: MetricsStore
@@ -38,7 +39,8 @@ export default class UserVitals {
     HT(this)
   }
   // 封装用户行为的上报入口
-  userSendHandler = (data: IMetrics) => {
+  // data: IMetrics
+  userSendHandler = () => {
     // this.engineInstance.transportInstance.kernelTransportHandler(
     //   this.engineInstance.transportInstance.formatTransportData(transportCategory.PV, data)
     // )

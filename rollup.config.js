@@ -16,7 +16,7 @@ const config = {
   output: {
     format: 'umd',
     file: 'dist/index.js',
-    name: 'Yeux',
+    name: 'Pic',
     sourcemap: env !== 'production'
   },
   plugins: [

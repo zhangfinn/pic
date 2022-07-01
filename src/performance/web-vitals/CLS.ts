@@ -1,4 +1,4 @@
-import MetricsStore, { metricsName, IMetrics } from '@/performance/store'
+import { metricsName, IMetrics } from '@/performance/store'
 import { observe, PerformanceEntryHandler } from '@/performance'
 
 export interface LayoutShift extends PerformanceEntry {
@@ -11,7 +11,7 @@ export const getCLS = (entryHandler: PerformanceEntryHandler): PerformanceObserv
   return observe('layout-shift', entryHandler)
 }
 
-export default (metrics: MetricsStore): void => {
+export default (_this: any): void => {
   let clsValue = 0
   let clsEntries = []
 
@@ -45,7 +45,7 @@ export default (metrics: MetricsStore): void => {
         clsEntries = sessionEntries
 
         // 记录 CLS 到 Map 里
-        metrics.set(metricsName.CLS, {
+        _this.metrics.set(metricsName.CLS, {
           entry,
           clsValue,
           clsEntries
